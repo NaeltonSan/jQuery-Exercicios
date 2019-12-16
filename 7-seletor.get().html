@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+        }
+
+        div {
+            display: block;
+            width: 1000px;
+            height: 100px;
+            margin: 50px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            function conteudoParagrafos(e) {
+                var arrayConteudos = [];
+
+                for (var i = 0; i < e.length; i++) {
+                    arrayConteudos.push(e[i].innerHTML);
+                    //console.log(arrayConteudos)
+                }
+                $('div').text(arrayConteudos.join(' - '));
+            }
+
+            $('button').click(function () {
+                conteudoParagrafos($('p').get().reverse());
+            });
+
+            $('.reset').click(function () {
+                $('div').empty();
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <button type="button">Rodar script</button>
+    <button type="button" class="reset">Reset</button>
+
+    <p>p 1</p>
+    <p>p 2</p>
+    <p>p 3</p>
+    <div></div>
+
+</body>
+
+</html>
