@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <style>
+    div {
+      width: 200px;
+      height: 100px;
+      border: 1px solid black;
+      margin: 20px;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function () {  //equivalente a : window.onload
+      $('#diferente').css('background', 'red');
+      $('p', $('#container')).css('color', 'green')
+      $('div', $('#container')).css('color', 'green')
+      })
+  </script>
+</head>
+
+
+<body>
+  <div></div>
+  <div id="diferente"></div>
+  <div></div>
+
+  <div id="container">
+    <p>paragrafo dentro da div#container</p>
+  </div>
+<div>
+  <p>paragrafo fora da div#container</p>
+</div>
+</body>
+
+</html>

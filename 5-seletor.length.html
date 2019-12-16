@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+        }
+
+        div {
+            display: block;
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+     $(document).ready(function () {
+        $('p').click(function () {
+            var nDiv = $('div').length;
+            $('<span>Foram encontradas ' + nDiv + ' DIVs. </span>').appendTo('#resultado');
+          })
+     });
+    </script>
+</head>
+
+<body>
+    <p>clique aqui para saber quantas Divs tem.</p>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <p id="resultado"></p>
+</body>
+
+</html>

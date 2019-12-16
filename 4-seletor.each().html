@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p {
+            cursor: pointer;
+            color: red;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 50px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('div').each(function (i) { // i ->  serve para criar um array
+                    var j = i + 1;
+                    alert('DIV ' + j + ' vai ser colorida');
+                    $(this).css('background', 'red');
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <button type="button">Colorir Divs</button>
+</body>
+
+</html>

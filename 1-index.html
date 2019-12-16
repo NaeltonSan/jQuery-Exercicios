@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+
+  <script>
+    //   $(document).ready(function(){  
+    //       $('#btn-vermelho').click(function () { 
+    //           $('#cor').css({'color': 'red'})
+              
+    //        })
+    //   })
+      // ready -> não é necessario que todos compenentes carrregem (ex: fotos), basta a estrutura de marcação
+
+      $().ready(function(){ 
+          $('#btn-vermelho').click(function () { 
+              $('#cor').css('color','red')
+              
+           })
+      })
+
+    //   $(function(){ 
+    //       $('#btn-vermelho').click(function () { 
+    //           $('#cor').css({'color': 'red'})
+              
+    //        })
+    //   })
+
+
+     //$()  -> encarregado por rncontrar elementos HTML, para evitar conflitos com outros plugins use o Jquery()
+     //     -> armazena automaticamente tudo que encontra
+
+  </script>
+</head>
+<body>
+
+    <h1 id="cor"> Cabeçalho muda de cor</h1>
+    <button type="button" id="btn-vermelho">Vermelho</button>
+    
+</body>
+</html>
