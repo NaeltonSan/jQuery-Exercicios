@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h1 {
+            visibility: hidden;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                var totalOcultos = $(':hidden', $('body')).length;
+                var inputOcultos = $('input:hidden').length;
+
+                $('span').text('Foram encontrados ' + totalOcultos + ' elementos ocultos, sendo ' + inputOcultos + ' elementos input do tipo hidden.') /* escrever o resultado */
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button type="button">Ocultos</button>
+
+    <h1>Cabeçalho oculto por declaração CSS</h1>
+    <form>
+        <input type="hidden" />
+        <input type="hidden" />
+    </form>
+    <span></span>
+    <!--aqui jQuery escreve os resultados de elementos ocultos encontrados -->
+</body>
+
+</html>
