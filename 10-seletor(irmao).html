@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div {
+        width: 200px;
+        height: 100px;
+        border: 1px solid black;
+        margin: 50px;
+    }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                $('h2~p').css('background', 'red'); //seleiona elementos posteriores ao h2, e que sejam irmãos (neste caso body)
+              })
+        });
+        
+    </script>
+</head>
+
+<body>
+    <button type="button">Vermelha</button>
+    <p>P  antes do cabeçalho h2</p>
+    <h2>cabeçalho h2</h2>
+    <p>primeiro P apos cabeçalho h2</p>
+    <p>segundo P apos cabeçalho h2</p>
+    <div>
+        DIV
+    </div>
+    <p>terceiro P apos cabeçalho h2</p>
+    <div>
+        <p>P dentro da div</p>
+    </div>
+
+</body>
+
+</html>
