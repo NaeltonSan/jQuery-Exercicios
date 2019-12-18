@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 50px;
+        }
+
+        table tr td {
+            height: 20px;
+            border: 1px solid black;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('.button').click(function () {
+                $("p:contains('Teste')").css('background', 'red');
+            })
+        });
+//////////////////////////////////////////////////////////////////////////
+        
+        $(document).ready(function () {
+            $('#button').click(function () { 
+                $("td:empty").css('background', 'red');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button type="button" class="button">Vermelha</button>
+    <h1>cabeçalho nível 1</h1>
+    <p> teste --- texto de um parágrafo</p>
+    <h2>cabeçalho nível 2</h2>
+    <p>Teste --- texto de um parágrafo</p>
+    <h3>cabeçalho nível 3</h3>
+    <p>teste --- texto de um parágrafo</p>
+    <h4>cabeçalho nível 4</h4>
+
+    <button type="button" id ="button">Vermelho</button>
+
+    <table>
+        <tr>
+            <td>Indice 0</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Indice 1</td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+
+</html>
