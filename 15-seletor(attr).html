@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #resultado {
+            display: none;
+            width: 300px;
+            padding: 8px 12px;
+            border: 1px solid black;
+            background-color: #ff0;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                var valorAtributo = $('h1').attr('title');
+                $('#resultado').css('display', 'block')
+                    .text('O valor do atributo title é ' + valorAtributo);
+            })
+        });
+    </script>
+</head>
+
+<body>
+
+    <button type="button">Atributo</button>
+
+    <h1 title="logotipo">Cabeçalho nv 1 com Atributo title = "logotipo"</h1>
+    <p id="um">Primeiro p com atributo id="um"</p>
+    <p class="diferente">Segundo p com atributo class="diferente"</p>
+    <p class="diferente">Segundo p com atributo class="diferente"</p>
+
+    <div id="resultado"></div>
+
+</body>
+
+</html>
