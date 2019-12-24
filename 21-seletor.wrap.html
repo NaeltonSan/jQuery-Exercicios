@@ -14,9 +14,10 @@
             margin-top: 30px;
         }
         
-        p {
+        .center{
             text-align: center;
         }
+
     </style>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -26,8 +27,13 @@
       $(document).ready(function () {
           $('button').click(function () {
               $('p').wrap('<div class="container"></div>');
+               
+              $('p').removeAttr("style");
+
+              $('p').addClass("center");
             })
       });
+      
     </script>
 </head>
 
@@ -35,9 +41,9 @@
 
     <button type="button">Defenir container</button>
     
-    <p>Texto dentro de um elemento p</p>
-    <p>Texto dentro de um elemento p</p>
-    <p>Texto dentro de um elemento p</p>
+    <p style="text-align: left;">Texto dentro de um elemento p</p>
+    <p style="text-align: left;">Texto dentro de um elemento p</p>
+   
 </body>
 
 </html>
