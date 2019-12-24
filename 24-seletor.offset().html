@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #0f0;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $('button').click(function () {
+                var coordenadasDiv = $('div').offset();
+                $('span').html('As coordenadas do div são:<br /> left: ' + coordenadasDiv.left + ' px<br /> top: ' + coordenadasDiv.top + ' px');
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <button type="button">coordenas</button>
+    <div> DIV para determonas as coordenas.</div>
+    <span></span>
+
+</body>
+
+</html>
