@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            border: 1px solid black;
+            background: #0f0;
+            margin: 20px 0;
+            padding:5px 10px;
+            overflow: scroll;
+        }
+
+        p {
+            width: 500px;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('button:eq(0)').click(function () {
+               var rolagemVertical = $('#rolagem').scrollTop();
+               var rolagemHorizontal = $('#rolagem').scrollLeft();
+               $('span:eq(0)').html('Posição da rolagem vertical: ' + rolagemVertical + 'px');
+               $('span:eq(1)').html('Posição rolagem horizontal' + rolagemHorizontal + 'px');
+              })
+
+              $('button:eq(1)').click(function () {
+                  $('#rolagem').scrollTop(0);
+                  $('#rolagem').scrollLeft(0);
+                  $('span').empty();
+                })
+        });
+        
+    </script>
+</head>
+
+<body>
+   
+    <button type="button">Coordenadas scroll</button>
+    <button type="reset">Reset</button>
+    <div id="rolagem">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illum at, 
+            animi reiciendis voluptatumquos amet mollitia dolor sequi magnam qui 
+            eligendi aspernatur dolorum consequuntur commodi sint nisi et sapient
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam 
+            at vero aliquam mollitia perferendis ad officia laboriosam? 
+            Consequatur rem qui iste aspernatur quisquam? Reprehenderit assumenda repudiandae 
+            blanditiis inventore exercitationem!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi illum at, 
+            animi reiciendis voluptatumquos amet mollitia dolor sequi magnam qui 
+            eligendi aspernatur dolorum consequuntur commodi sint nisi et sapient
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam 
+            at vero aliquam mollitia perferendis ad officia laboriosam? 
+            Consequatur rem qui iste aspernatur quisquam? Reprehenderit assumenda repudiandae 
+            blanditiis inventore exercitationem!</p>
+    </div>
+
+    <span></span>
+    <br>
+    <span></span>
+</body>
+
+</html>
