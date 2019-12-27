@@ -20,14 +20,16 @@
 
     <script>
       $(document).ready(function () {
-          $('button')
+          $('button').click(function () {
+              $('div').not('.cor-fundo').css('background', 'red');
+            })
       });
     </script>
 </head>
 
 <body>
    
-    <button type="button">Filter</button>
+    <button type="button">.not()</button>
 
     <div>Primeiro DIV</div>
     <div class="cor-fundo">Segundo DIV</div>
