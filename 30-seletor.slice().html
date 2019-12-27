@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+      div {
+          width: 100px;
+          height: 50px;
+          margin: 50px;
+          border: 1px solid black;
+      }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function () {
+          $('button').click(function () {
+              $('div').slice(1,4).css('background', 'red');
+            })
+      });
+    </script>
+</head>
+
+<body>
+   
+    <button type="button">.slice()</button>
+
+    <div>Primeiro DIV</div>
+    <div>Segundo DIV</div>
+    <div>Terceiro DIV</div>
+    <div>Quarto DIV</div>
+    <div>Quinto DIV</div>
+    <p></p>
+</body>
+
+</html>
