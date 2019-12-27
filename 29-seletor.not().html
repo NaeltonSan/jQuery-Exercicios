@@ -7,7 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-      
+      div {
+          width: 100px;
+          height: 50px;
+          margin: 50px;
+          border: 1px solid black;
+      }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -15,20 +20,17 @@
 
     <script>
       $(document).ready(function () {
-          $('button').click(function () {
-              var resultados = ($('div:eq(1)').is('.cor'));
-              $('p').text(' O valor retornado é : ' + resultados);
-            })
+          $('button')
       });
     </script>
 </head>
 
 <body>
    
-    <button type="button">is()</button>
+    <button type="button">Filter</button>
 
     <div>Primeiro DIV</div>
-    <div class="cor">Segundo DIV</div>
+    <div class="cor-fundo">Segundo DIV</div>
     <div>Terceiro DIV</div>
     <p></p>
 </body>
