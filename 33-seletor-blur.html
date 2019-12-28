@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('input').blur(function () {
+        $('input').css('background' , 'yellow')
+        $('span:eq(0)').text('Disparou o evento blur.')
+        })
+    });
+
+    $(document).ready(function () {
+      
+    });
+
+  </script>
+</head>
+
+<body>
+  <p>Clique dentro e depois fora para ver o ressultado</p>
+<input type="text">
+<span class="mengagem"></span>
+<hr>
+  <p>Faça seleçoes no campo select</p>
+  <select name="" id="">
+    <option value="">Escolha 1</option>
+    <option value="">Escolha 2</option>
+    <option value="">Escolha 3</option>
+    <option value="">Escolha 4</option>
+  </select>
+</body>
+
+</html>
