@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      cursor: pointer;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.mousedown').mousedown(function () {
+        $(this).append('<span style="color:blue">  mousedown</span>');
+      });
+    });
+
+    $(document).ready(function () {
+      $('.mouseup').mouseup(function () {
+        $(this).append('<span style="color:red">  mousedown</span>');
+        })
+    });
+  </script>
+</head>
+
+<body>
+
+  <h2 class="mousedown">Faça acontecer o mousedown aqui.</h2>
+  <hr>
+  <h2 class="mouseup">Faça acontecer o mouseup aqui.</h2>
+  <hr>
+  <h2 class=""></h2>
+
+</body>
+
+</html>
