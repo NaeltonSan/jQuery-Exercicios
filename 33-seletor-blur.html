@@ -7,7 +7,16 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-  
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: greenyellow;
+      border: 1px solid black;
+    }
+
+    .muda-cor {
+      background-color: blue;
+    }
   </style>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -25,6 +34,13 @@
       $('select').change(function () {
         var valorEscolhido = $('option:selected').text();
         $('span:eq(1)').html('Você disparou o evento change.<br/>Selecionou: '+ valorEscolhido);
+        })
+    });
+
+    $(document).ready(function () {
+      $('div').dblclick(function () {
+        $('div').toggleClass('muda-cor');
+        $('span:eq(2)').html('Disparou o evneto dbclick.');
         })
     });
 
@@ -47,7 +63,11 @@
   <span></span>
   <hr>
 
-  
+  <div>
+    <span></span>
+  </div>
+
+
 </body>
 
 </html>
