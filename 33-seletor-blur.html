@@ -7,11 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <style>
-    .container {
-      width: 100px;
-      height: 100px;
-      border: 1px solid black;
-    }
+  
   </style>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -26,7 +22,10 @@
     });
 
     $(document).ready(function () {
-      
+      $('select').change(function () {
+        var valorEscolhido = $('option:selected').text();
+        $('span:eq(1)').html('Você disparou o evento change.<br/>Selecionou: '+ valorEscolhido);
+        })
     });
 
   </script>
@@ -35,8 +34,9 @@
 <body>
   <p>Clique dentro e depois fora para ver o ressultado</p>
 <input type="text">
-<span class="mengagem"></span>
+<span></span>
 <hr>
+
   <p>Faça seleçoes no campo select</p>
   <select name="" id="">
     <option value="">Escolha 1</option>
@@ -44,6 +44,10 @@
     <option value="">Escolha 3</option>
     <option value="">Escolha 4</option>
   </select>
+  <span></span>
+  <hr>
+
+  
 </body>
 
 </html>
