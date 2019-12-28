@@ -10,6 +10,13 @@
     body {
       cursor: pointer;
     }
+
+    div {
+      width: 100px;
+      height: 100px;
+      margin: 50px;
+      border: 1px solid black;
+    }
   </style>
 
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -25,8 +32,18 @@
     $(document).ready(function () {
       $('.mouseup').mouseup(function () {
         $(this).append('<span style="color:red">  mousedown</span>');
-        })
+      })
     });
+
+    $(document).ready(function () {         //efeito rollover
+      $('div').mouseover(function () {
+        $(this).css('background', 'red');
+      }).mouseout(function () {
+        $(this).css('background', 'blue');
+      })
+    });
+
+
   </script>
 </head>
 
@@ -36,8 +53,8 @@
   <hr>
   <h2 class="mouseup">Faça acontecer o mouseup aqui.</h2>
   <hr>
-  <h2 class=""></h2>
-
+  <p>Passe o mouse sobre o DIV</p>
+  <div></div>
 </body>
 
 </html>
