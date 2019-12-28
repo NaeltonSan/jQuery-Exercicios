@@ -24,8 +24,8 @@
 
   <script>
     $(document).ready(function () {
-      $('input').blur(function () {
-        $('input').css('background' , 'yellow')
+      $('input:eq(0)').blur(function () {
+        $('input:eq(0)').css('background' , 'yellow')
         $('span:eq(0)').text('Disparou o evento blur.')
         })
     });
@@ -43,7 +43,13 @@
         $('span:eq(2)').html('Disparou o evneto dbclick.');
         })
     });
-
+    
+    $(document).ready(function () {
+      $('input:eq(1)').focus(function () {
+        $('input:eq(1)').css('background', 'red')
+        $('span:eq(3)').html('Use apenas números.');
+        })
+    });
   </script>
 </head>
 
@@ -66,8 +72,11 @@
   <div>
     <span></span>
   </div>
+  <hr>
 
-
+  <p>Informe seus dados.</p>
+  <label for="">CPF<input type="text"></label>
+  <span></span>
 </body>
 
 </html>
