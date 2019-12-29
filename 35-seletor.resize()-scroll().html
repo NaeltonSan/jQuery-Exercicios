@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    div {
+      
+      width: 200px;
+      height: 100px;
+      margin-top: 50px;
+      overflow: scroll;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(window).resize(function () {
+        $("span").text('Redimensionou');
+      });
+    });
+    $(document).ready(function () {
+      $('div').scroll(function () {
+        $('.scroll').text('Acionou a barra de rolagem do div').css('color', 'red')
+        })
+    });
+  </script>
+</head>
+
+<body>
+  <span></span>
+  <hr>
+  <div>
+    <h4>DIV com barra de rolagem</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+      Sunt inventore accusantium possimus commodi magni dolore sed alias, 
+      repellat, cum vero officiis laudantium voluptates quod obcaecati 
+      consequuntur! Blanditiis laborum ex sapiente. 
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+    Natus ipsum facilis, doloribus, repellendus excepturi laborum at 
+    velit iusto veritatis laudantium nobis beatae! Nemo corrupti, beatae
+     cumque aspernatur nisi illo molestiae!</p>
+  </div>
+  <p class="scroll"></p>
+</body>
+
+</html>
