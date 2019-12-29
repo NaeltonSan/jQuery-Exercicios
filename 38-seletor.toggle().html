@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("p").click(function () {
+        $("p").toggle(1000, function () {
+          $("span").text("Texto desapareceu em 1 segundo.")
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<p>Clique aqui para desaparecer...</p>
+<span></span>
+
+</body>
+</html>
