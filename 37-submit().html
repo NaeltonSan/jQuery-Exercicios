@@ -19,11 +19,12 @@
     $(document).ready(function () {
       $('form').submit(function () {
         if($('input:first').val() == ''){
+          $('div').text('Preencha com a palavra!');
           return false;
         }
         if($('input:first').val() !== 'jQuery') {
           $('div').text('Palavra errada!');
-          return false
+          return false;
         }
         else {
           $('div').text('Palavra CERTA!');
