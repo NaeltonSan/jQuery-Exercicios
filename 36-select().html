@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+   
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $(document).select(function () {
+        $('<span>Disparou evento de select!</span>')
+        .show().fadeOut(3000).appendTo('div').css('color', 'red');
+        })
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" value="Selecione este texto">
+  <div></div>
+</body>
+
+</html>
