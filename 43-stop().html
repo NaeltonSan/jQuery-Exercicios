@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    div {
+      margin-top: 20px;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      background:red;
+    }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('button:eq(0)').click(function () {
+        $('div').animate({left:'+=1000px'}, 8000);
+        })
+
+      $('button:eq(1)').click(function () {
+        $('div').stop();
+        })
+
+      $('button:eq(2)').click(function () {
+        $('div').animate({left:'-=1000px'}, 8000);
+        })
+
+      $('button:eq(3)').click(function () {
+        $('div').css({left:"8px"});
+        })
+    });
+  </script>
+</head>
+
+<body>
+  <button type="button">Animar</button>
+  <button type="button">Parar</button>
+  <button type="button">Voltar</button>
+  <button type="button">Reset</button>
+
+  <div></div>
+</body>
+</html>
