@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function () {
+      $("button:first").click(function () {
+        atualizaClique($('span:first'));
+      });
+
+      $("button:last").click(function () {
+        $("button:first").trigger('click');
+        atualizaClique($('span:last'));
+      });
+
+      function atualizaClique(o) {
+        var n = parseInt(o.text(), 0);
+        o.text(n + 1);
+      }
+    });
+  </script>
+</head>
+
+<body>
+  <button type="button">Botão n-1</button>
+  <button type="button">Botão n-2</button>
+  <p>Soma dos clique nos botões 1 e 2</p><span>0</span>
+  <p>Soma Somente do botão 2</p><span>0</span>
+</body>
+
+</html>
